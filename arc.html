@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>AARCC</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <!--header -->
+    <header class="bg-gray-900">
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only"
+              >Alabama Advanced Reseach Computing Consortium</span
+            >
+            <img class="h-8 w-auto" src="aarcc.svg" alt="" />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="#"
+            class="text-sm font-semibold leading-6 text-white"
+            >Get Involved</a
+          >
+          <a
+            href="#"
+            class="text-sm font-semibold leading-6 text-white"
+            >Calendar</a
+          >
+          <a
+            href="#"
+            class="text-sm font-semibold leading-6 text-white"
+            >Documents</a
+          >
+          <a
+            href="#"
+            class="text-sm font-semibold leading-6 text-white"
+            >Reports</a
+          >
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a
+            href="#"
+            class="text-sm font-semibold leading-6 text-white"
+            >Sign up <span aria-hidden="true">&rarr;</span></a
+          >
+        </div>
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-10"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
+        >
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">AARCC</span>
+              <img
+                class="h-8 w-auto"
+                src="aarcc.svg"
+                alt=""
+              />
+            </a>
+            <button
+              type="button"
+              class="-m-2.5 rounded-md p-2.5 text-gray-400"
+            >
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/25">
+              <div class="space-y-2 py-6">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                  >Get Involved</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                  >Calendar</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                  >Documents</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                  >Reports</a
+                >
+              </div>
+              <div class="py-6">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                  >Sign up</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="flex flex-col lg:flex-row min-h-screen">
+      <!--sidebar -->
+      <div class="bg-white lg:w-1/5 border-r border-gray-200">
+        <div
+          class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6"
+        >
+          <div class="flex h-16 shrink-0 items-center">
+            <img
+              class="h-8 w-auto"
+              src="aarcc.svg"
+              alt="Alabama Advanced Research Computing Consortium"
+            />
+          </div>
+          <nav class="flex flex-1 flex-col">
+            <ul role="list" class="flex flex-1 flex-col gap-y-7">
+              <li>
+                <ul role="list" class="-mx-2 space-y-1">
+                  <li>
+                    <!-- Current: "bg-gray-50", Default: "hover:bg-gray-50" -->
+                    <a
+                      href="#"
+                      class="bg-gray-50 block rounded-md py-2 pr-2 pl-10 text-sm leading-6 font-semibold text-gray-700"
+                      >Home</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <button
+                        type="button"
+                        class="hover:bg-gray-50 flex items-center w-full text-left rounded-md p-2 gap-x-3 text-sm leading-6 font-semibold text-gray-700"
+                        aria-controls="sub-menu-1"
+                        aria-expanded="false"
+                      >
+                        <!-- Expanded: "rotate-90 text-gray-500", Collapsed: "text-gray-400" -->
+                        <svg
+                          class="text-gray-400 h-5 w-5 shrink-0"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Get Involved
+                      </button>
+                      <!-- Expandable link section, show/hide based on state. -->
+                      <ul class="mt-1 px-2" id="sub-menu-1">
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="hover:bg-gray-50 block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700"
+                            >Interest and Working Groups</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="hover:bg-gray-50 block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700"
+                            >Sites</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <button
+                        type="button"
+                        class="hover:bg-gray-50 flex items-center w-full text-left rounded-md p-2 gap-x-3 text-sm leading-6 font-semibold text-gray-700"
+                        aria-controls="sub-menu-2"
+                        aria-expanded="false"
+                      >
+                        <!-- Expanded: "rotate-90 text-gray-500", Collapsed: "text-gray-400" -->
+                        <svg
+                          class="text-gray-400 h-5 w-5 shrink-0"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        Projects
+                      </button>
+                      <!-- Expandable link section, show/hide based on state. -->
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="hover:bg-gray-50 block rounded-md py-2 pr-2 pl-10 text-sm leading-6 font-semibold text-gray-700"
+                      >Calendar</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="hover:bg-gray-50 block rounded-md py-2 pr-2 pl-10 text-sm leading-6 font-semibold text-gray-700"
+                      >Documents</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="hover:bg-gray-50 block rounded-md py-2 pr-2 pl-10 text-sm leading-6 font-semibold text-gray-700"
+                      >Reports</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- main -->
+      <div class="flex-grow">
+        <div class="bg-white px-6 py-32 lg:px-8">
+          <div
+            class="mx-auto max-w-3xl text-base leading-7 text-gray-700"
+          >
+            <p
+              class="text-base font-semibold leading-7 text-indigo-600"
+            >
+              About Us
+            </p>
+            <h1
+              class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            >
+Alabama Advanced Research Computing Consortium
+            </h1>
+            <p class="mt-6 text-xl leading-8">
+              The Alabama Advance Research Computing Consortium (AARCC) is an organization of skilled professionals committed to advancing research computing and data within Alabama's academic and research landscape. Key areas of focus for AARCC include fostering a community among research computing and data professionals, connecting with the wider research computing and data ecosystem, professional development, and identifying stakeholders and shared values in a time of rapid technological change.
+            </p>
+            <h4
+                class="mt-10 text-2xl font-bold tracking-tight text-gray-900"
+              >
+              The AARCC Charter outlines the following Vision and Mission:
+              </h4>
+              <div
+              class="mt-6 text-base font-semibold leading-7 text-indigo-600"
+            >
+              Vision
+            </div>
+            <div class="max-w-2xl">
+              <p>
+                AARCC propels research innovation by enhancing the capabilities of research computing and data (RCD) professionals in Alabama. This includes fostering their career progression and visibility, and their ability to offer effective services and resources to researchers. AARCC serves as a hub for RCD professionals and organizations, uniting them around common goals, facilitating knowledge exchange, and fostering ongoing advancements in research computing and data.
+              </p>
+              <p
+              class="mt-6 text-base font-semibold leading-7 text-indigo-600"
+            >
+              Mission
+            </p>
+              <p class="">
+                AARCC's communities, working groups, and collaborative partners drive the progression and sustainability of RCD at academic, government, and non-profit institutions in Alabama. AARCC unites professionals across various RCD roles and organizations, including system architects, software and data specialists, and those who collaborate directly with researchers. AARCC's working groups investigate and develop strategies, best practices, and products that empower researchers not just at the campus level, but also regionally, nationally, and internationally.
+              </p>
+              </div>
+<ul
+  role="list"
+  class="mt-8 max-w-xl space-y-8 text-gray-600"
+>
+  <li class="flex gap-x-3">
+    <svg
+      class="mt-1 h-5 w-5 flex-none text-indigo-600"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+        clip-rule="evenodd"
+      />
+    </svg>
+    <span
+      ><strong class="font-semibold text-gray-900"
+        >CI workforce development and professionalization.</strong
+      >
+      Focusing on advancing the capabilities and professional growth of individuals involved in computational infrastructure.</span
+    >
+  </li>
+  <li class="flex gap-x-3">
+    <svg
+      class="mt-1 h-5 w-5 flex-none text-indigo-600"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+        clip-rule="evenodd"
+      />
+    </svg>
+    <span
+      ><strong class="font-semibold text-gray-900"
+        >Connecting Alabama's research computing and data professional community.</strong
+      >
+      Promoting diverse roles such as researcher-facing, systems-facing, stakeholder-facing, and software/data-facing.</span
+    >
+  </li>
+  <li class="flex gap-x-3">
+    <svg
+      class="mt-1 h-5 w-5 flex-none text-indigo-600"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+        clip-rule="evenodd"
+      />
+    </svg>
+    <span
+      ><strong class="font-semibold text-gray-900"
+        >Identifying stakeholders and formulating value propositions.</strong
+      >
+      For the CI, research computing, and data communities in Alabama.</span
+    >
+  </li>
+  <li class="flex gap-x-3">
+    <svg
+      class="mt-1 h-5 w-5 flex-none text-indigo-600"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+        clip-rule="evenodd"
+      />
+    </svg>
+    <span
+      ><strong class="font-semibold text-gray-900"
+        >Understanding and shaping the future of research computing and data support.</strong
+      >
+      Advocacy and sustainability at campuses and beyond in Alabama.</span
+   
+
+ >
+  </li>
+  <li class="flex gap-x-3">
+    <svg
+      class="mt-1 h-5 w-5 flex-none text-indigo-600"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+        clip-rule="evenodd"
+      />
+    </svg>
+    <span
+      ><strong class="font-semibold text-gray-900"
+        >Developing tools and resources.</strong
+      >
+      To define, support, and guide the profession of research computing and data within the academic sector.</span
+    >
+  </li>
+</ul>
+<p class="mt-10">To join the AARCC mailing list, <a href="#" class="text-indigo-600">sign up here</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
