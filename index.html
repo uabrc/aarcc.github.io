@@ -6,33 +6,40 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>AARCC</title></a>
-    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
-
+    <title>AARCC</title>
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
   </head>
   <body class="bg-gray-100">
-    <!--header -->
+    <!-- Header -->
     <header class="bg-gray-900">
-        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-            <div class="flex lg:flex-1">
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only"
-              >Alabama Advanced Reseach Computing Consortium</span
+              >Alabama Advanced Research Computing Consortium</span
             >
             <img class="h-8 w-auto" src="aarcc.svg" alt="" />
           </a>
         </div>
         <div class="flex lg:hidden">
-          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-                  hx-trigger="click"
-                  hx-toggle="class:invisible"
-                  hx-target="#mobile-menu">
-              <!-- SVG for open icon -->
+          <button
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+           id="hamburger" 
+          >
             <span class="sr-only">Open main menu</span>
+            <!-- SVG for open icon -->
             <svg
               class="h-6 w-6"
               fill="none"
@@ -80,28 +87,28 @@
           >
         </div>
       </nav>
-      <!-- Mobile menu, show/hide based on menu open state. -->
-          <div id="mobile-menu" class="lg:hidden invisible" role="dialog" aria-modal="true">
-
-        <!-- Background backdrop, show/hide based on slide-over state. -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden hidden"
+        role="dialog"
+        aria-modal="true"
+      >
         <div class="fixed inset-0 z-10"></div>
         <div
           class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
-          >
+        >
           <div class="flex items-center justify-between">
             <a href="#" class="-m-1.5 p-1.5">
               <span class="sr-only">AARCC</span>
-              <img
-                class="h-8 w-auto"
-                src="aarcc.svg"
-                alt=""
-              />
+              <img class="h-8 w-auto" src="aarcc.svg" alt="" />
             </a>
-            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700"
-            hx-trigger="click"
-            hx-toggle="class:invisible"
-            hx-target="#mobile-menu">
+            <button
+              type="button"
+              class="-m-2.5 rounded-md p-2.5 text-gray-700"
+              id="close-button"
+            >
               <span class="sr-only">Close menu</span>
+              <!-- SVG for close icon -->
               <svg
                 class="h-6 w-6"
                 fill="none"
@@ -157,7 +164,7 @@
 
     <div class="flex flex-col lg:flex-row min-h-screen">
       <!--sidebar -->
-      <div class="bg-white lg:w-1/5 border-r border-gray-200">
+      <div class="hidden lg:block bg-white lg:w-1/5 border-r border-gray-200" >
         <div
           class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6"
         >
@@ -432,5 +439,14 @@ Alabama Advanced Research Computing Consortium
         </div>
       </div>
     </div>
+    <script>
+      document.getElementById('hamburger').addEventListener('click', function() {
+          document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+  
+      document.getElementById('close-button').addEventListener('click', function() {
+          document.getElementById('mobile-menu').classList.add('hidden');
+      });
+  </script>
   </body>
 </html>
