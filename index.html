@@ -438,6 +438,24 @@ Alabama Advanced Research Computing Consortium
       document.getElementById('close-button').addEventListener('click', function() {
           document.getElementById('mobile-menu').classList.add('hidden');
       });
+      document.addEventListener('DOMContentLoaded', () => {
+    const dropdownButtons = document.querySelectorAll('button[aria-controls]');
+
+    dropdownButtons.forEach(button => {
+        const subMenuId = button.getAttribute('aria-controls');
+        const subMenu = document.getElementById(subMenuId);
+
+        // Set initial state to closed
+        button.setAttribute('aria-expanded', 'false');
+        subMenu.style.display = 'none';
+
+        button.addEventListener('click', () => {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', !isExpanded);
+            subMenu.style.display = isExpanded ? 'none' : 'block';
+        });
+    });
+});
   </script>
   </body>
 </html>
